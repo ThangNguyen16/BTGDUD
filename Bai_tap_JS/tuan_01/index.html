@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenges</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+            background: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+        
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        
+        input[disabled] {
+            background: #eee;
+        }
+        
+        button {
+            padding: 10px 15px;
+            border-radius: 6px;
+            border: none;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #0056b3;
+        }
+        
+        .result-input {
+            width: 100%;
+        }
+        
+        span {
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>BMI Calculator</h1>
+
+        <div class="card">
+            <h2>Mark</h2>
+            <div class="row">
+                <input id="M_mass" type="text" placeholder="Mark's mass">
+                <input id="M_height" type="text" placeholder="Mark's height">
+            </div>
+            <div class="row">
+                <button id="M_btn">Calculate</button>
+                <input id="M_res" type="text" class="result-input" disabled>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Jack</h2>
+            <div class="row">
+                <input id="J_mass" type="text" placeholder="Jack's mass">
+                <input id="J_height" type="text" placeholder="Jack's height">
+            </div>
+            <div class="row">
+                <button id="J_btn">Calculate</button>
+                <input id="J_res" type="text" class="result-input" disabled>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Compare BMI</h2>
+            <div class="row">
+                <button id="compare_btn">Compare</button>
+                <input id="compare_input" type="text" class="result-input" disabled>
+            </div>
+        </div>
+
+        <h1>Coding Challenge #3</h1>
+
+        <div class="card">
+            <h3>Test case 1</h3>
+            <p>Dolphins: 96, 108, 89 — Koalas: 88, 91, 110</p>
+            <div class="row">
+                <button id="testcase_1_btn">Result</button>
+                <input id="testcase_1_res" type="text" disabled>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Test case 2</h3>
+            <p>Dolphins: 97, 112, 101 — Koalas: 109, 95, 123</p>
+            <div class="row">
+                <button id="testcase_2_btn">Result</button>
+                <input id="testcase_2_res" type="text" disabled>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Test case 3</h3>
+            <p>Dolphins: 97, 112, 101 — Koalas: 109, 95, 123</p>
+            <div class="row">
+                <button id="testcase_3_btn">Result</button>
+                <input id="testcase_3_res" type="text" disabled>
+            </div>
+        </div>
+
+        <h1>Coding Challenge #4</h1>
+
+        <div class="card">
+            <p>Enter the bill value</p>
+            <div class="row">
+                <input type="text" id="bill_value" placeholder="Bill amount">
+                <button id="tip_btn">Check Tip</button>
+            </div>
+            <span id="tip_res"></span>
+        </div>
+
+    </div>
+
+    <script src="../tuan_01/main.js"></script>
+</body>
+
+</html>
